@@ -1,11 +1,12 @@
 <header fxLayoutAlign="start center">
-    <div fxFlex>
-        Logo
+    <div fxFlex fxLayoutAlign="start end" fxLayoutGap="10">
+        <mat-icon class="logoIcon">home</mat-icon>
+        <span class="logo">{{title}}</span>
     </div>
-    <div>
-        <button routerLink="">Strona główna</button>
-        <button routerLink="/offers">Oferty</button>
-        <button routerLink="/agents">Aganci Nieruchomości</button>
-        <button routerLink="/creditCalculator">Kalulator kredytowy</button>
+    <div fxLayoutGap="20">
+        <button mat-raised-button routerLink="">Strona główna</button>
+        <button mat-raised-button routerLink="/offers">Oferty</button>
+        <button mat-raised-button routerLink="/agents">Aganci Nieruchomości</button>
+        <button mat-raised-button routerLink="/creditCalculator">Kalulator kredytowy</button>
     </div>
 </header>

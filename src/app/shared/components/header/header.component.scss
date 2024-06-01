@@ -1,4 +1,12 @@
 :host{
-    background: #999;
-    padding: 20px;
+    background: #8ca7ff;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;   
+}
+.logo{
+    font-size: 20px;
+}
+.logoIcon{
+    font-size: 28px;
 }

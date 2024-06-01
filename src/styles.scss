@@ -1,6 +1,12 @@
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
 body,
 html{
     margin: 0;
     padding: 0;
     height: 100%;
+    margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+.content{
+    padding: 20px;
+    background: rgb(249, 252, 252);
 }

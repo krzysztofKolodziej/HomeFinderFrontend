@@ -6,7 +6,7 @@ import { appConfig } from './app.config';
 const serverConfig: ApplicationConfig = {
   providers: [
     provideServerRendering(),
-    { provide: 'serverModules', useValue: [FlexLayoutServerModule], multi: true }
+    { provide: 'serverModules', useValue: [], multi: true }
   ]
 };
 
