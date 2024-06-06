@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { FlexLayoutServerModule } from '@angular/flex-layout/server';
 import { CommonModule } from '@angular/common';
 
 

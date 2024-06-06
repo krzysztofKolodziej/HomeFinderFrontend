@@ -1,19 +1,180 @@
+<form (ngSubmit)="applyFilters()" #filterForm="ngForm" class="filter-form">
+  <mat-form-field appearance="fill">
+    <mat-label>Cena od</mat-label>
+    <input matInput type="number" name="minPrice" [(ngModel)]="minPrice">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Cena do</mat-label>
+    <input matInput type="number" name="maxPrice" [(ngModel)]="maxPrice">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Rok budowy od</mat-label>
+    <input matInput type="number" name="minYearOfConstruction" [(ngModel)]="minYearOfConstruction">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Rok budowy do</mat-label>
+    <input matInput type="number" name="maxYearOfConstruction" [(ngModel)]="maxYearOfConstruction">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Rodzaj nieruchomości</mat-label>
+    <mat-select name="kindOfProperty" [(ngModel)]="kindOfProperty">
+      <mat-option>Dowolny</mat-option>
+      <mat-option value="MIESZKANIE">Mieszkanie</mat-option>
+      <mat-option value="DOM">Dom</mat-option>
+      <mat-option value="DZIALKA">Działka</mat-option>
+      <mat-option value="LOKAL">Lokal</mat-option>
+      <mat-option value="GARAZ">Garaż</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Lokalizacja</mat-label>
+    <input matInput type="text" name="city" [(ngModel)]="city">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Liczba pokoi od</mat-label>
+    <input matInput type="number" name="minNumberOfRooms" [(ngModel)]="minNumberOfRooms">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Liczba pokoi do</mat-label>
+    <input matInput type="number" name="maxNumberOfRooms" [(ngModel)]="maxNumberOfRooms">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Powierzchnia od</mat-label>
+    <input matInput type="number" name="minArea" [(ngModel)]="minArea">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Powierzchnia do</mat-label>
+    <input matInput type="number" name="maxArea" [(ngModel)]="maxArea">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Cena za metr od</mat-label>
+    <input matInput type="number" name="minPricePerMeter" [(ngModel)]="minPricePerMeter">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Cena za metr do</mat-label>
+    <input matInput type="number" name="maxPricePerMeter" [(ngModel)]="maxPricePerMeter">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Piętro od</mat-label>
+    <input matInput type="number" name="minFloor" [(ngModel)]="minFloor">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Piętro do</mat-label>
+    <input matInput type="number" name="maxFloor" [(ngModel)]="maxFloor">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Forma własności</mat-label>
+    <mat-select name="ownerShipForm" [(ngModel)]="ownerShipForm">
+      <mat-option>Dowolna</mat-option>
+      <mat-option value="PELNAWLASNOSC">Pełna własność</mat-option>
+      <mat-option value="SPOLDZIELCZE">Spółdzielcze</mat-option>
+      <mat-option value="UZYTKOWANIEWIECZYSTE">Użytkowanie wieczyste</mat-option>
+      <mat-option value="UDZIAL">Udział</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Poziom wykończenia</mat-label>
+    <mat-select name="finishLevel" [(ngModel)]="finishLevel">
+      <mat-option>Dowolny</mat-option>
+      <mat-option value="DOZAMIESZKANIA">Do zamiekszaknia</mat-option>
+      <mat-option value="DOWYKONCZENIA">Do wykończenia</mat-option>
+      <mat-option value="DOREMONTU">Do remontu</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Miejsce parkingowe</mat-label>
+    <mat-select name="parkingPlace" [(ngModel)]="parkingPlace">
+      <mat-option>Dowolnie</mat-option>
+      <mat-option value="BRAK">Brak</mat-option>
+      <mat-option value="MIEJSCEWGARAZUPODZIEMNYM">Miejsce w garażu podziemnym</mat-option>
+      <mat-option value="MIEJSCENAZIEMNE">Miejsce naziemne</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Rodzaj ogrzewanie</mat-label>
+    <mat-select name="heating" [(ngModel)]="heating">
+      <mat-option>Dowolnie</mat-option>
+      <mat-option value="MIEJSKIE">Miejskie</mat-option>
+      <mat-option value="GAZOWE">Gazowe</mat-option>
+      <mat-option value="ELEKTRYCZNE">Elektryczne</mat-option>
+      <mat-option value="KOTLOWE">Kotłowe</mat-option>
+      <mat-option value="INNE">Inne</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Rynek</mat-label>
+    <mat-select name="market" [(ngModel)]="market">
+      <mat-option>Dowolny</mat-option>
+      <mat-option value="PIERWOTNY">Pierwotny</mat-option>
+      <mat-option value="WTORNY">Wtórny</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Typ ogłoszeniodawcy</mat-label>
+    <mat-select name="announcerType" [(ngModel)]="announcerType">
+      <mat-option>Dowolny</mat-option>
+      <mat-option value="DEWELOPER">Deweloper</mat-option>
+      <mat-option value="BIURONIERUCHOMOSCI">Biuro nieruchomości</mat-option>
+      <mat-option value="OSOBAPRYWATNA">Osoba prywatna</mat-option>
+    </mat-select> 
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Typ budynku</mat-label>
+    <mat-select name="buildingType" [(ngModel)]="buildingType">
+      <mat-option>Dowolny</mat-option>
+      <mat-option value="BLOK">Blok</mat-option>
+      <mat-option value="KAMIENICA">Kamienica</mat-option>
+      <mat-option value="DOMWOLNOSTOJACY">Dom wolnostający</mat-option>
+      <mat-option value="SZEREGOWIEC">Szeregowiec</mat-option>
+      <mat-option value="APARTAMENTOWIEC">Apartamentowiec</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button mat-raised-button type="submit">Filtruj</button>
+</form>
+
 <h1>Oferty</h1>
 <mat-card *ngFor="let offers of offers">
-    <div flexLayout="row">
-        <div flexLayout="column" fxFlex>
-            <mat-card-title>{{offers.name}}</mat-card-title>
-            <mat-card-subtitle>Start</mat-card-subtitle>
-            <div flexLayout="row">
-                <img src="assets/placeholder.png" mat-card-lg-image />
-                <mat-card-content fxFlex>Opis</mat-card-content>
-            </div>
-        </div>
-        <div>
-            <div>{{offers.price}}</div>
-        </div>
+  <div flexLayout="row">
+    <div>
+      <div class="img">
+        <img src="assets/placeholder.png" mat-card-lg-image />
+      </div>
     </div>
-    <mat-card-actions>
-        <button mat-raised-button color="assets">Przejdź do ofrty</button>
-    </mat-card-actions>
+    <div flexLayout="column" fxFlex>
+      <mat-card-title>{{offers.price | numberFormat}} PLN</mat-card-title>
+      <mat-card-subtitle>rodzaj nieruchomości: {{offers.kindOfProperty.toLocaleLowerCase()}}</mat-card-subtitle>
+      <br>
+      <mat-card-content>{{offers.title}}</mat-card-content>
+      <mat-card-content>{{offers.city}}</mat-card-content>
+      <br>
+      <mat-card-content>{{getRoomsText(offers.numberOfRooms)}} <b>-</b> {{offers.area}}m²
+        <b>-</b> {{offers.pricePerMeter}}PLN/m² </mat-card-content>
+    </div>
+    <div fxLayoutAlign="center">
+      <mat-card-actions>
+        <button mat-raised-button>Przejdź do ofrty</button>
+      </mat-card-actions>
+    </div>
+  </div>
 </mat-card>

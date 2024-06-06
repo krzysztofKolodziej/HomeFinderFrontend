@@ -4,4 +4,30 @@
 }
 mat-card{
     margin-bottom: 25px;
+    width: 800px;
 }
+mat-card-title{
+    margin-left: 18px;
+}
+mat-card-subtitle{
+    margin-left: 18px;
+}
+img{
+    width: 200px;
+}
+.filter-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 10px;
+  }
+  
+  mat-form-field {
+    width: 100%;
+  }
+  
+  button {
+    grid-column: span 1;
+    justify-self: center;
+    margin-top: 16px;
+  }
