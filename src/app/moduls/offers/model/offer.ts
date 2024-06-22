@@ -1,4 +1,5 @@
 export interface Offer{
+    id: number;
     kindOfProperty: string;
     price: number;
     title: string;

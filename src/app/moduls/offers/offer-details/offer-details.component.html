@@ -1,0 +1,45 @@
+<div *ngIf="offer" class="offer-details-container">
+    <div class="offer-header">
+      <h1>{{offer.title }}</h1>
+      <h2>{{offer.price | numberFormat}} PLN</h2>
+    </div>
+  
+    <div class="offer-main">
+      <div class="offer-images">
+        <img src="assets/placeholder.png" />
+      </div>
+  
+      <div class="offer-info">
+        <p>{{ offer.city }}, {{ offer.street }}</p>
+        <p>{{getRoomsText(offer.numberOfRooms)}}, {{ offer.area }} m²</p>
+        <p>Cena za m²: {{ offer.pricePerMeter }} PLN/m²</p>
+        <p>Piętro: {{ offer.floor }}</p>
+      </div>
+    </div>
+  
+    <div class="offer-description">
+      <h3>Opis</h3>
+      <p>{{ offer.description }}</p>
+    </div>
+  
+    <div class="offer-details">
+      <h3>Szczegóły ogłoszenia</h3>
+      <ul>
+        <li>Forma własności: {{ offer.offerDetailsDto?.ownershipForm }}</li>
+        <li>Czynsz: {{ offer.offerDetailsDto?.rent }}</li>
+        <li>Miejsce parkingowe: {{ offer.offerDetailsDto?.parkingPlace }}</li>
+        <li>Poziom wykończenia: {{ offer.offerDetailsDto?.finishLevel }}</li>
+        <li>Ogrzewanie: {{ offer.offerDetailsDto?.heating }}</li>
+        <li>Kontakt: {{ offer.offerDetailsDto?.contactDetails }}</li>
+        <li>Rynek: {{ offer.offerDetailsDto?.market }}</li>
+        <li>Typ ogłoszeniodawcy: {{ offer.offerDetailsDto?.announcerType }}</li>
+        <li>Rok budowy: {{ offer.offerDetailsDto?.yearOfConstruction }}</li>
+        <li>Typ budynku: {{ offer.offerDetailsDto?.buildingType }}</li>
+        <li>Media: {{ offer.offerDetailsDto?.media }}</li>
+        <li>Wyposażenie: {{ offer.offerDetailsDto?.equipment }}</li>
+      </ul>
+    </div>
+    <br>
+    <h2>Masz pytanie do oferty? Wyślij je nam w formularzu kontaktowym:</h2>
+    <app-offer-message></app-offer-message>
+  </div>

@@ -1,1 +1,17 @@
-<p>agents works!</p>
+<h1>Nasi Agenci nieruchomości</h1>
+<mat-card *ngFor="let agent of agents">
+  <div flexLayout="row">
+    <div>
+      <div class="img">
+        <img src="assets/placeholder.png" mat-card-lg-image />
+      </div>
+    </div>
+    <div flexLayout="column" fxFlex>
+      <mat-card-title>{{agent.name}}</mat-card-title>
+      <mat-card-content>Adres biura: ul.{{agent.street}}, {{agent.houseNumber}}</mat-card-content>
+      <mat-card-content class="zipCode">{{agent.zipCode}} {{agent.city}}</mat-card-content>
+      <mat-card-content>Adres email: {{agent.email}}</mat-card-content>
+      <mat-card-content>Telefon:<span class="phone" >{{agent.phoneNumber}}</span></mat-card-content>
+    </div>
+  </div>
+</mat-card>

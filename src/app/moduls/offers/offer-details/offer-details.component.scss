@@ -1,0 +1,45 @@
+.offer-details-container {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+  }
+  
+  .offer-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .offer-main {
+    display: flex;
+  }
+  
+  .offer-images {
+    flex: 1;
+  }
+  
+  .offer-images img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .offer-info {
+    flex: 2;
+    padding: 20px;
+  }
+  
+  .offer-description {
+    margin: 20px 0;
+  }
+  
+  .offer-details {
+    margin: 20px 0;
+  }
+  
+  .offer-details ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .offer-details li {
+    margin-bottom: 10px;
+  }

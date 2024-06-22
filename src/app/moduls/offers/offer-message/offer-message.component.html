@@ -1,0 +1,27 @@
+<div class="message-form-container">
+    <div class="message-form">
+      <form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
+        <mat-form-field appearance="fill">
+          <mat-label>Imię</mat-label>
+          <input matInput formControlName="name" required>
+        </mat-form-field>
+  
+        <mat-form-field appearance="fill">
+          <mat-label>Email</mat-label>
+          <input matInput formControlName="email" required>
+        </mat-form-field>
+  
+        <mat-form-field appearance="fill">
+          <mat-label>Numer telefonu</mat-label>
+          <input matInput formControlName="phoneNumber">
+        </mat-form-field>
+  
+        <mat-form-field appearance="fill">
+          <mat-label>Wiadomość</mat-label>
+          <textarea matInput formControlName="message" rows="5" required></textarea>
+        </mat-form-field>
+  
+        <button mat-raised-button color="primary" type="submit">Wyślij wiadomość</button>
+      </form>
+    </div>
+  </div>

@@ -135,7 +135,7 @@
       <mat-option value="DEWELOPER">Deweloper</mat-option>
       <mat-option value="BIURONIERUCHOMOSCI">Biuro nieruchomości</mat-option>
       <mat-option value="OSOBAPRYWATNA">Osoba prywatna</mat-option>
-    </mat-select> 
+    </mat-select>
   </mat-form-field>
 
   <mat-form-field appearance="fill">
@@ -171,9 +171,15 @@
       <mat-card-content>{{getRoomsText(offers.numberOfRooms)}} <b>-</b> {{offers.area}}m²
         <b>-</b> {{offers.pricePerMeter}}PLN/m² </mat-card-content>
     </div>
-    <div fxLayoutAlign="center">
-      <mat-card-actions>
-        <button mat-raised-button>Przejdź do ofrty</button>
+    <div fxLayout="column" >
+      <mat-card-actions fxFlex>
+        <button mat-raised-button [routerLink]="['/offers/', offers.id]"> Przejdź do oferty</button>
+      </mat-card-actions>
+      <mat-card-actions fxFlex>
+        <button mat-raised-button [routerLink]="['/offers/update/', offers.id]">Edytuj ofertę</button>
+      </mat-card-actions>
+      <mat-card-actions fxFlex>
+        <button mat-raised-button (click)="deleteOffer(offers.id)">Usuń ofertę</button>
       </mat-card-actions>
     </div>
   </div>

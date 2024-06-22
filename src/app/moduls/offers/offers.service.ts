@@ -13,6 +13,7 @@ export class OffersService {
   getOffers(): Observable<Offer[]>{
     return this.http.get<Offer[]>("/api/offers");
   }
+
   getFilteredOffers(
     minPrice?: number,
     maxPrice?: number,
@@ -63,4 +64,7 @@ export class OffersService {
     return this.http.get<Offer[]>('api/offers', { params: params });
   }
 
+  delete(id: number): Observable<void> {
+    return this.http.delete<void>('api/offers/' + id)
+  }
 }

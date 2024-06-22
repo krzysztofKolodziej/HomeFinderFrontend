@@ -1,0 +1,116 @@
+<h1>Edytuj ofertę</h1>
+<form fxLayout="column" [formGroup]="offerForm" (submit)="submit()">
+    <mat-form-field appearance="fill">
+      <mat-label>Rodzaj nieruchomości</mat-label>
+      <input matInput placeholder="Podaj rodzaj nieruchomości" formControlName="kindOfProperty">
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Cena</mat-label>
+      <input matInput placeholder="Podaj cenę" formControlName="price">
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Tytuł oferty</mat-label>
+      <input matInput placeholder="Podaj tytuł" formControlName="title">
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Miasto</mat-label>
+      <input matInput placeholder="Podaj miasto" formControlName="city">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Ulica</mat-label>
+      <input matInput placeholder="Podaj ulicę" formControlName="street">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Liczba pokoi</mat-label>
+      <input matInput placeholder="Podaj liczbę pokoi" formControlName="numberOfRooms">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Powierzchnia</mat-label>
+      <input matInput placeholder="Podaj powierzchnie" formControlName="area">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Cena za metr</mat-label>
+      <input matInput placeholder="Podaj cenę za metr" formControlName="pricePerMeter">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Piętro</mat-label>
+      <input matInput placeholder="Podaj piętro" formControlName="floor">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Opis</mat-label>
+      <textarea matInput rows="20" placeholder="Podaj opis oferty" formControlName="description"></textarea>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Czynsz</mat-label>
+      <input matInput placeholder="Podaj wysokość czynszu" formControlName="rent">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Forma prawna</mat-label>
+      <input matInput placeholder="Podaj formę prawną nieruchomości" formControlName="ownershipForm">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Miejsce parkingowe</mat-label>
+      <input matInput placeholder="Podaj informacje o miejscu" formControlName="parkingPlace">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Stopień wykończenia</mat-label>
+      <input matInput placeholder="Podaj stopień wykończenia" formControlName="finishLevel">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Rodzaj ogrzewania</mat-label>
+      <input matInput placeholder="Podaj rodzaj ogrzewania" formControlName="heating">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Dane kontaktowe</mat-label>
+      <input matInput placeholder="Podaj dane kontaktowe" formControlName="contactDetails">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Rynek</mat-label>
+      <input matInput placeholder="Podaj rynek" formControlName="market">
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Typ ogłoszeniodawcy</mat-label>
+      <input matInput placeholder="Podaj typ ogłoszeniodawcy" formControlName="announcerType">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Rok budowy</mat-label>
+      <input matInput placeholder="Podaj rok budowy" formControlName="yearOfConstruction">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Rodzaj budynku</mat-label>
+      <input matInput placeholder="Podaj rodzaj budynku" formControlName="buildingType">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Media</mat-label>
+      <input matInput placeholder="Podaj dostępne media" formControlName="media">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Wyposażenie</mat-label>
+      <input matInput placeholder="Podaj wyposażenie" formControlName="equipment">
+    </mat-form-field>
+    <div> 
+        <button mat-raised-button>Zapisz</button>
+    </div>
+  </form>
+  

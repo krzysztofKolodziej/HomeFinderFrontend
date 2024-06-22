@@ -11,14 +11,16 @@ import { NumberFormatPipe } from '../../shared/components/number.format.pipe';
 import { FormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
-import {MatCheckboxModule} from '@angular/material/checkbox';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { RouterModule } from '@angular/router';
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 
 
 
 @Component({
   selector: 'app-offers',
   standalone: true,
-  
+
   imports: [
     MatCardModule,
     MatIconModule,
@@ -30,8 +32,9 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     FormsModule,
     FlexModule,
     NgFor,
-
-    NumberFormatPipe],
+    RouterModule,
+    NumberFormatPipe,
+    MatSnackBarModule],
   templateUrl: './offers.component.html',
   styleUrl: './offers.component.scss'
 })
@@ -60,8 +63,10 @@ export class OffersComponent {
   announcerType!: string;
   buildingType!: string;
 
-  constructor(private offersServis: OffersService) { }
-  
+  constructor(
+    private offersServis: OffersService,
+    private snackBar: MatSnackBar) { }
+
   ngOnInit(): void {
     this.getOffers();
     this.applyFilters();
@@ -96,6 +101,22 @@ export class OffersComponent {
       this.announcerType,
       this.buildingType
     ).subscribe(offer => this.offers = offer);
+  }
+
+  deleteOffer(id: number) {
+    this.offersServis.delete(id).subscribe(() => {
+      this.snackBar.open(`Oferta o numerze ${id} została usunięta`, 'Zamknij', {
+        duration: 4000,
+      });
+      this.offers = this.offers.filter(offer => offer.id !== id);
+      this.loadOffers(); 
+    });
+  }
+
+  loadOffers() {
+    this.offersServis.getOffers().subscribe((data) => {
+      this.offers = data;
+    });
   }
 
   getRoomsText(numberOfRooms: number): string {

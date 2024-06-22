@@ -1,33 +1,38 @@
-:host{
+:host {
     display: flex;
     flex-direction: column;
-}
-mat-card{
+  }
+
+  mat-card {
     margin-bottom: 25px;
     width: 800px;
-}
-mat-card-title{
+  }
+
+  mat-card-title,
+  mat-card-subtitle {
     margin-left: 18px;
-}
-mat-card-subtitle{
-    margin-left: 18px;
-}
-img{
-    width: 200px;
-}
-.filter-form {
+  }
+  
+  .mat-form-field {
+    width: 100%;
+  }
+  
+  button.mat-raised-button {
+    width: 100%;
+  }
+  
+  .filter-form {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 10px;
     padding: 10px;
   }
   
-  mat-form-field {
-    width: 100%;
+  img {
+    width: 200px;
   }
   
-  button {
-    grid-column: span 1;
-    justify-self: center;
-    margin-top: 16px;
+  mat-card-actions button {
+    width: 200px;
   }
+  

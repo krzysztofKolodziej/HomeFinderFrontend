@@ -1,0 +1,29 @@
+:host {
+  display: flex;
+  flex-direction: column;
+}
+
+mat-card {
+  margin-bottom: 25px;
+  width: 800px;
+}
+
+mat-card-title {
+  margin-left: 18px;
+}
+
+.mat-form-field {
+  width: 100%;
+}
+
+img {
+  width: 200px;
+}
+
+.zipCode {
+  margin-left: 82px;
+}
+
+.phone {
+  margin-left: 32px;
+}
